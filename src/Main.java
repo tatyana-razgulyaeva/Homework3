@@ -36,11 +36,14 @@ public class Main {
         System.out.println("На каждого ученика рассчитано " + totalSheets / (studentsOfTheFirstTeacher + studentsOfTheSecondTeacher + studentsOfTheThirdTeacher) + " листов бумаги");
 
         byte equipmentPerformanceIn2Minutes = 16;
-        short equipmentPerformanceIn20Minutes = (short) (equipmentPerformanceIn2Minutes * 10);
-        short equipmentPerformanceIn1Hours = (short) (equipmentPerformanceIn20Minutes *3);
-        short equipmentPerformancePerDay = (short) (equipmentPerformanceIn1Hours * 24);
-        int equipmentPerformanceIn3Days = (equipmentPerformancePerDay * 3);
-        int equipmentPerformanceFor1Month = (equipmentPerformanceIn3Days *10);
+        byte time1 = 10;
+        byte time2 = 3;
+        byte time3 = 24;
+        short equipmentPerformanceIn20Minutes = (short) (equipmentPerformanceIn2Minutes * time1);
+        short equipmentPerformanceIn1Hours = (short) (equipmentPerformanceIn20Minutes * time2);
+        short equipmentPerformancePerDay = (short) (equipmentPerformanceIn1Hours * time3);
+        int equipmentPerformanceIn3Days = (equipmentPerformancePerDay * time2);
+        int equipmentPerformanceFor1Month = (equipmentPerformanceIn3Days * time1);
         System.out.println("За 20 минут машина произвела " + equipmentPerformanceIn20Minutes + " штук бутылок");
         System.out.println("За сутки машина произвела " + equipmentPerformancePerDay + " штук бутылок");
         System.out.println("За три дня машина произвела " + equipmentPerformanceIn3Days + " штук бутылок");
